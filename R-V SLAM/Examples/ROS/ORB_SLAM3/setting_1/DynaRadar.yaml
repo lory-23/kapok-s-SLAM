@@ -1,0 +1,60 @@
+%YAML:1.0
+---
+R_cam_mat: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [       615.580190,   0.,      321.538956,       0.,
+                 0.,        615.834428, 255.360511,       0.,
+                 0.,        0.,      1.,            0.,
+                 0.,        0.,      0.,            1. ]
+P_cam_mat: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [       1., 0., 0., 0., 
+                 0., 1., 0., 0.,
+                 0.,0., 1., 0.,
+                 0., 0., 0.,1. ]
+extrinsicT_mat: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [0.9923843915095195, 0.02248264076238958, 0.1211104882024264,0.09745671335935055,
+          -0.02065260699342217, 0.9996530998485085, -0.01634471742316875,-0.03088040461999195,
+          -0.1214359473659096, 0.01371899513876016, 0.9925044583576069,0.2573068726735189, 
+               0 ,                0 ,                0 ,                1]
+#0.999803269491 , -0.0158352004594 , -0.0119444021047 , -0.114588775217,
+ #             0.0157988359628, 0.999870282998 , -0.00313272398443 , -0.0797912943261,
+  #            0.011992460025,  0.00294340003252 ,   0.999923755743 , -0.0406683537725,
+   #             0 ,                0 ,                0 ,                1]
+#[-0.9907893035467634, 0.01753506968952936, 0.1342723996519868, -0.03862109153781897,
+ #         -0.01862826032021468, -0.9998027418665453, -0.006889504596168252, -0.112455128693008,
+#          0.1341251053858368, -0.009327308675156881, 0.9909205101410089,  0.2065549710071788,
+ #         0 ,                 0 ,                 0 ,                1]
+
+mSegDistanceThreshold: 0.2
+
+
+mDelaunaySegDistanceThreshold: 0.2
+mDelaunaySegDistanceMin: 250
+
+mMaskRadius: 400
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 2000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7

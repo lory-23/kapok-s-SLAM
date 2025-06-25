@@ -1,0 +1,50 @@
+%YAML:1.0
+---
+R_cam_mat: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [       615.580190,   0.,      321.538956,       0.,
+                 0.,        615.834428, 255.360511,       0.,
+                 0.,        0.,      1.,            0.,
+                 0.,        0.,      0.,            1. ]
+P_cam_mat: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [       1., 0., 0., 0., 
+                 0., 1., 0., 0.,
+                 0.,0., 1., 0.,
+                 0., 0., 0.,1. ]
+extrinsicT_mat: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [  0.999880082353  ,-0.0136919976796, -0.00723533787182,   -0.128487494671,
+                  0.0136389964567 ,   0.999880156893 ,-0.00732459058497,  -0.0666856558586,
+                  0.00733475904374 ,  0.0072250294897 ,   0.999946998725  ,-0.0396134801104,
+                  0           ,      0           ,      0         ,        1]
+
+mSegDistanceThreshold: 20
+
+
+mDelaunaySegDistanceThreshold: 0.2
+mDelaunaySegDistanceMin: 250
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 1250
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
